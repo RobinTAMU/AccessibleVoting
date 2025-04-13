@@ -1,0 +1,30 @@
+.page-wrapper {
+  height: 95vh;
+  width: 95vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
+
+.full-row {
+  text-align: center;
+  border: 2px solid black;
+}
+
+.full-row p {
+  font-size: 1.5em;
+}
+
+.content {
+  width: 95vw;
+  text-align: center;
+  font-size: 2em;
+}
+
+.confirmation-button {
+  width: 60%;
+  height: 2.5em;
+  margin-bottom: 3.5vh;
+  font-size: 1.5em;
+}
