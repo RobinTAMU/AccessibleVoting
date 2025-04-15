@@ -1,0 +1,46 @@
+.page-wrapper {
+  height: 95vh;
+  width: 95vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.full-row {
+  text-align: center;
+  border: 2px solid black;
+}
+
+.full-row p {
+  font-size: 1.5em;
+}
+
+.candidate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid black;
+}
+
+.party-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.party-row p,
+h3,
+h2 {
+  font-size: 1.5em;
+}
+
+.button {
+  width: 70%;
+  height: 3em;
+  margin-bottom: 3.5vh;
+  font-size: 1.5em;
+}
+
+.row-button {
+  font-size: 1.5em;
+}
