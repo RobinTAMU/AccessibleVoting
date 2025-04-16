@@ -41,20 +41,31 @@ h2 {
   font-size: 1.5em;
 }
 
-.party-row:has(#selection:focus){
+.party-row:has(#select:focus){
   background: rgb(64, 227, 64);
   border-color: rgb(9, 171, 9);
   border-width: 5px;
 }
 
-#selection::after {
+#select::after {
   content: "CLICK HERE TO SELECT";
 }
 
-#selection:focus:after {
+#select:focus:after {
   content: "SELECTED";
 }
 
 .row-button {
   font-size: 1.5em;
+  pointer-events: none;
+}
+
+.row-button::after {
+  content: "Please select an option above";
+}
+
+.page-wrapper:has(#select:focus) .row-button::after{
+  content: "Press to confirm your choice";
+  pointer-events: auto;
+  cursor: auto;
 }
