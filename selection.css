@@ -41,6 +41,20 @@ h2 {
   font-size: 1.5em;
 }
 
+.party-row:has(#selection:focus){
+  background: rgb(64, 227, 64);
+  border-color: rgb(9, 171, 9);
+  border-width: 5px;
+}
+
+#selection::after {
+  content: "CLICK HERE TO SELECT";
+}
+
+#selection:focus:after {
+  content: "SELECTED";
+}
+
 .row-button {
   font-size: 1.5em;
 }
