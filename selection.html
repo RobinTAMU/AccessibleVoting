@@ -10,7 +10,7 @@
 
 <body>
     <div class="page-wrapper">
-        <div class="full-row">
+        <div tabindex="-1" class="full-row">
             <h1>2024 PRESIDENTIAL ELECTION</h1>
         </div>
         <div class="candidate-grid">
@@ -20,7 +20,10 @@
                 <p>Donald J. Trump</p>
                 <h3>For vice president:</h3>
                 <p>J.D. Vance</p>
-                <button class="button" id="select"></button>
+                Press to Select
+                <label role="radio" class="radio">
+                    <input type="radio" tabindex="2" id="r-button" value="test" name="candidate-select" />
+                </label>
             </div>
             <div class="party-row">
                 <h2>DEMOCRAT</h2>
@@ -28,7 +31,10 @@
                 <p>Kamala D. Harris</p>
                 <h3>For vice president:</h3>
                 <p>Tim Walz</p>
-                <button class="button" id="select"></button>
+                Press to Select
+                <label role="radio" class="radio">
+                    <input type="radio" tabindex="4" id="r-button" value="test1" name="candidate-select"/>
+                </label>
             </div>
             <div class="party-row">
                 <h2>LIBERTARIAN</h2>
@@ -36,10 +42,13 @@
                 <p>Chase Oliver</p>
                 <h3>For vice president:</h3>
                 <p>Mike ter Maat</p>
-                <button class="button" id="select"></button>
+                Press to Select
+                <label role="radio" class="radio">
+                    <input type="radio" tabindex="6" id="r-button" value="test2" name="candidate-select"/>
+                </label>
             </div>
         </div>
-        <button class="row-button" onclick="window.location.href='confirmation.html'">
+        <button class="row-button" tabindex="7" onclick="window.location.href='confirmation.html'">
             <p></p>
         </button>
     </div>

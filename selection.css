@@ -6,6 +6,10 @@
   flex-direction: column;
 }
 
+.candidate-grid:has(input[type='radio']:focus) {
+  border-width: 5px;
+}
+
 .full-row {
   text-align: center;
   border: 2px solid black;
@@ -34,38 +38,63 @@ h2 {
   font-size: 1.5em;
 }
 
-.button {
+.s-button {
   width: 70%;
   height: 3em;
   margin-bottom: 3.5vh;
   font-size: 1.5em;
 }
 
-.party-row:has(#select:focus){
+input[type='radio'] {
+  box-sizing:content-box;
+  appearance: none;
+  background: white;
+  outline: 1px solid #333;
+  border: 1px solid white;
+  width: 250px;
+  height: 30px;
+  content: "hi";
+}
+
+input[type='radio']:checked {
+  background: #13c749;
+}
+
+.party-row:has(input[type='radio']:checked){
   background: rgb(64, 227, 64);
   border-color: rgb(9, 171, 9);
   border-width: 5px;
 }
 
-#select::after {
-  content: "CLICK HERE TO SELECT";
-}
-
-#select:focus:after {
-  content: "SELECTED";
-}
-
 .row-button {
-  font-size: 1.5em;
   pointer-events: none;
 }
 
-.row-button::after {
-  content: "Please select an option above";
+.row-button:focus {
+  border-width: 5px;
 }
 
-.page-wrapper:has(#select:focus) .row-button::after{
-  content: "Press to confirm your choice";
+.page-wrapper:has(input[type='radio']) .row-button::after{
+  content: "Please Select A Candidate";
+  pointer-events:none;
+  cursor:none;
+}
+
+.page-wrapper:has(input[type='radio']:checked) .row-button::after{
+  content: "Confirm Vote";
   pointer-events: auto;
   cursor: auto;
 }
+
+.page-wrapper:has(input[type='radio']:checked) .row-button{
+  background: rgb(64, 227, 64);
+  border-color: rgb(9, 171, 9);
+}
+
+
+
+/*.party-row:has(#select:focus){
+  background: rgb(64, 227, 64);
+  border-color: rgb(9, 171, 9);
+  border-width: 5px;
+}*/
