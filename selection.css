@@ -82,19 +82,11 @@ input[type='radio']:checked {
 
 .page-wrapper:has(input[type='radio']:checked) .row-button::after{
   content: "Confirm Vote";
-  pointer-events: auto;
-  cursor: auto;
 }
 
 .page-wrapper:has(input[type='radio']:checked) .row-button{
   background: rgb(64, 227, 64);
   border-color: rgb(9, 171, 9);
+  pointer-events: auto;
+  cursor: auto;
 }
-
-
-
-/*.party-row:has(#select:focus){
-  background: rgb(64, 227, 64);
-  border-color: rgb(9, 171, 9);
-  border-width: 5px;
-}*/
