@@ -32,3 +32,7 @@
   margin-bottom: 3.5vh;
   font-size: 2em;
 }
+
+.confirmation-button:focus {
+  border-width: 5px;
+}
