@@ -90,3 +90,10 @@ input[type='radio']:checked {
   pointer-events: auto;
   cursor: auto;
 }
+
+label.radio:hover .party-row {
+  cursor: pointer;
+  background-color: #f0f8ff; /* Light blue hint */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Optional: visual pop */
+  transition: background-color 0.2s ease;
+}
