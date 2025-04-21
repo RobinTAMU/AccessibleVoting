@@ -102,3 +102,11 @@ label.radio:hover .party-row {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Optional: visual pop */
   transition: background-color 0.2s ease;
 }
+
+.page-wrapper:has(input[type='radio']:checked) .row-button:hover,
+.page-wrapper:has(input[type='radio']:checked) .row-button:focus {
+  background-color: #f0f8ff; /* Optional soft feedback */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+}
