@@ -15,18 +15,36 @@
         </div>
         <div class="content">
             <h2>To confirm your selection for:</h2>
-            <p>For president: Chase Oliver</p>
-            <p>For vice president: Mike ter Maat</p>
+            <p id="president"></p>
+            <p id="vice-president"></p>
             <h2>Please click the button below to cast and finalize your vote for the 2024 Presidential Election.</h2>
-            <button class="confirmation-button" onclick="window.location.href='end.html'">
-                Cast Vote
+            <button class="confirmation-button" onclick="finalizeVote()">
+                Confirm
             </button>
             <h2>To change your vote, click the button below:</h2>
             <button class="confirmation-button" onclick="window.location.href='selection.html'">
-                Change Vote
+                Cancel
             </button>
         </div>
     </div>
 </body>
 
 </html>
+
+<script src="voteStorage.js"></script>
+<script>
+  displayVote();
+</script>
+
+<script src="voiceAssist.js"></script>
+<script>
+  runConfirmationInteraction(
+    () => {
+        localStorage.clear();
+        window.location.href = "end.html";
+    },
+    () => {
+        window.location.href = "selection.html?resume=1";
+    }
+    );
+</script>

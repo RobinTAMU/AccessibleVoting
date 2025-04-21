@@ -14,39 +14,36 @@
             <h1>2024 PRESIDENTIAL ELECTION</h1>
         </div>
         <div class="candidate-grid">
-            <div class="party-row">
-                <h2>REPUBLICAN</h2>
-                <h3>For president:</h3>
-                <p>Donald J. Trump</p>
-                <h3>For vice president:</h3>
-                <p>J.D. Vance</p>
-                Press to Select
-                <label role="radio" class="radio">
-                    <input type="radio" tabindex="2" id="r-button" value="test" name="candidate-select" />
-                </label>
-            </div>
-            <div class="party-row">
-                <h2>DEMOCRAT</h2>
-                <h3>For president:</h3>
-                <p>Kamala D. Harris</p>
-                <h3>For vice president:</h3>
-                <p>Tim Walz</p>
-                Press to Select
-                <label role="radio" class="radio">
-                    <input type="radio" tabindex="4" id="r-button" value="test1" name="candidate-select"/>
-                </label>
-            </div>
-            <div class="party-row">
-                <h2>LIBERTARIAN</h2>
-                <h3>For president:</h3>
-                <p>Chase Oliver</p>
-                <h3>For vice president:</h3>
-                <p>Mike ter Maat</p>
-                Press to Select
-                <label role="radio" class="radio">
-                    <input type="radio" tabindex="6" id="r-button" value="test2" name="candidate-select"/>
-                </label>
-            </div>
+            <label role="radio" class="radio">
+                <div class="party-row">
+                    <input type="radio" onclick="storeVote('REPUBLICAN', 'Donald J. Trump', 'J.D. Vance')" name="candidate-select" style="display: none;"/>
+                    <h2>REPUBLICAN</h2>
+                    <h3>For president:</h3>
+                    <p>Donald J. Trump</p>
+                    <h3>For vice president:</h3>
+                    <p>J.D. Vance</p>
+                </div>
+            </label>
+            <label role="radio" class="radio">
+                <div class="party-row">
+                    <input type="radio" onclick="storeVote('DEMOCRAT', 'Kamala D. Harris', 'Tim Walz')" name="candidate-select" style="display: none;"/>
+                    <h2>DEMOCRAT</h2>
+                    <h3>For president:</h3>
+                    <p>Kamala D. Harris</p>
+                    <h3>For vice president:</h3>
+                    <p>Tim Walz</p>
+                </div>
+            </label>
+            <label role="radio" class="radio">
+                <div class="party-row">
+                    <input type="radio" onclick="storeVote('LIBERTARIAN', 'Chase Oliver', 'Mike ter Maat')" name="candidate-select" style="display: none;"/>
+                    <h2>LIBERTARIAN</h2>
+                    <h3>For president:</h3>
+                    <p>Chase Oliver</p>
+                    <h3>For vice president:</h3>
+                    <p>Mike ter Maat</p>
+                </div>
+            </label>
         </div>
         <button class="row-button" tabindex="7" onclick="window.location.href='confirmation.html'">
             <p></p>
@@ -55,3 +52,15 @@
 </body>
 
 </html>
+
+<script src="voteStorage.js"></script>
+
+<script src="voiceAssist.js"></script>
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const fromCancel = urlParams.get('resume') === '1';
+
+  runCandidateSelection(() => {
+    window.location.href = "confirmation.html";
+  }, fromCancel);
+</script>
