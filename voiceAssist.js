@@ -1,6 +1,3 @@
-// voice-assist.js
-
-// ======== Shared Utilities ========
 
 function speak(text, callback) {
     const synth = window.speechSynthesis;
@@ -39,7 +36,7 @@ function speak(text, callback) {
   }
   
   
-  // ======== Part 1: Introduction ========
+  // Part 1: Introduction
   
   const introScript = `Welcome to the Accessible Digital Voting Application System.
   You are voting in the 2024 Presidential Election for the United States of America.
@@ -64,7 +61,7 @@ function speak(text, callback) {
     speak(introScript, () => listen(['yes', 'repeat'], handleResponse));
   }
   
-  // ======== Part 2: Candidate Selection ========
+  // Part 2: Candidate Selection
   
   const candidateInstructions = `We will now begin Part 1 of the voting process. 
   The candidates in this election are:
@@ -106,7 +103,7 @@ function speak(text, callback) {
       return;
     }
   
-    step1(); // Default full flow
+    step1();
   
     function step1() {
       speak(candidateInstructions, () => {
@@ -171,7 +168,7 @@ function speak(text, callback) {
   }
   
   
-  // ======== Part 3: Confirmation ========
+  // Part 3: Confirmation
   
   function runConfirmationInteraction(onConfirm, onCancel) {
     const president = localStorage.getItem('vote_president');
