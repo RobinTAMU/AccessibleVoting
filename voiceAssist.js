@@ -2,7 +2,7 @@
 function speak(text, callback) {
     const synth = window.speechSynthesis;
     const utter = new SpeechSynthesisUtterance(text);
-    utter.rate = 2;
+    utter.rate = 1.5;
     utter.onend = () => callback?.();
     synth.speak(utter);
   }
@@ -70,7 +70,8 @@ function speak(text, callback) {
   For the Libertarian party: Chase Oliver for president and Mike ter Maat for vice president.
   If you are ready to proceed, say ‘Yes.’ If you would like to hear Part 1’s instructions again, say ‘Repeat.’`;
   
-  const numberInstructions = `We will now begin Part 2 of the voting process. 
+  const numberInstructions = `We will now begin Part 2 of the voting process. You will be asked to say two numbers.
+  Please ensure you include the word, and, between the two numbers. 
   To cast your vote for the Republican party candidates, say the numbers “Eight” and “Two.”
   For the Democrat party, say “Four” and “Seven.”
   For the Libertarian party, say “Nine” and “One.”`;
