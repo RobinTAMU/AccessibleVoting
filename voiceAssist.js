@@ -4,6 +4,7 @@ function speak(text, callback) {
     const utter = new SpeechSynthesisUtterance(text);
     utter.rate = 1.5;
     utter.onend = () => callback?.();
+    synth.cancel();
     synth.speak(utter);
   }
   
