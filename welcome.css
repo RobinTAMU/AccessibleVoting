@@ -29,15 +29,6 @@
   font-size: 1.5em;
 }
 
-/* Button hover/focus feedback */
-.button-hoverable {
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.button-hoverable:hover,
-.button-hoverable:focus {
-  cursor: pointer;
-  background-color: #f0f8ff; /* Soft blue glow */
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-  outline: none;
+.confirmation-button:focus {
+  border-width: 5px;
 }
