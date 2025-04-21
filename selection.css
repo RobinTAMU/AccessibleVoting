@@ -85,8 +85,8 @@ input[type='radio']:checked {
 }
 
 .row-button {
-  font-size: 1.5rem; /* Adjust size as needed */
-  padding: 1rem;     /* Adds space inside the button */
+  font-size: 1.5rem; 
+  padding: 1rem;     
 }
 
 .page-wrapper:has(input[type='radio']:checked) .row-button{
