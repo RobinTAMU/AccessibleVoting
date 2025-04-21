@@ -84,6 +84,11 @@ input[type='radio']:checked {
   content: "Confirm Vote";
 }
 
+.row-button {
+  font-size: 1.5rem; /* Adjust size as needed */
+  padding: 1rem;     /* Adds space inside the button */
+}
+
 .page-wrapper:has(input[type='radio']:checked) .row-button{
   background: rgb(64, 227, 64);
   border-color: rgb(9, 171, 9);
