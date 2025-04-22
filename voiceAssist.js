@@ -200,4 +200,13 @@ function speak(text, callback) {
   
     repeat();
   }
+
+
+  // Part 4: End
+  
+  const EndScript = `Thank you for voting. You may now exit the polling station.`;
+  
+  function runEndInteraction() {  
+    speak(EndScript, null);
+  }
   
