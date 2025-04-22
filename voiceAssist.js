@@ -191,7 +191,7 @@ function speak(text, callback) {
   
     function handleResponse(res) {
       if (res === 'confirm') {
-        speak("Congratulations, you have completed the voting process. You may now exit the poll station. Thank you for your participation.", onConfirm);
+        //pass, moved to its own part so even non-audio participants may hear the dialogue.
       } else if (res === 'cancel') {
         speak("Returning to Part 2.", onCancel);
       } else {
