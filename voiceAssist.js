@@ -45,6 +45,7 @@ function speak(text, callback) {
   Part one introduces the names of the candidates and their running mates.
   Part two allows you to select your preferred candidate by stating two unique numbers out-loud, which will be clearly presented to you.
   Step three will give you the opportunity to review and confirm your selection, then cast your vote.
+  Legal Notice: By using this system, you confirm that you are eligible to vote in this election and understand that submitting a vote through this application is a formal expression of your ballot. 
   Before we begin, please confirm that you are interested in voting in this election and that you understand and agree to the voting rules and procedures.
   If you are ready to proceed, say ‘Yes.’ If you would like to hear the instructions again, say ‘Repeat.’`;
   
@@ -201,9 +202,7 @@ function speak(text, callback) {
     repeat();
   }
 
-
-  // Part 4: End
-  
+  // Part 4: End if the user pressed the button instead of speaking their response
   const EndScript = `Thank you for voting. You may now exit the polling station.`;
   
   function runEndInteraction() {  

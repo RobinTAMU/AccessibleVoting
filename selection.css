@@ -49,11 +49,10 @@ input[type='radio'] {
   box-sizing:content-box;
   appearance: none;
   background: white;
-  outline: 1px solid #333;
-  border: 1px solid white;
-  width: 250px;
-  height: 30px;
-  content: "hi";
+  outline: 0px solid #333;
+  border: 0px solid white;
+  width: 0px;
+  height: 0px;
 }
 
 input[type='radio']:checked {

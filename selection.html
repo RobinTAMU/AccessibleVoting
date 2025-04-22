@@ -9,14 +9,14 @@
 </head>
 
 <body>
-    <div class="page-wrapper">
+    <div tabindex="-1" class="page-wrapper">
         <div tabindex="-1" class="full-row">
             <h1>2024 PRESIDENTIAL ELECTION</h1>
         </div>
         <div class="candidate-grid">
             <label role="radio" class="radio">
                 <div class="party-row">
-                    <input type="radio" onclick="storeVote('REPUBLICAN', 'Donald J. Trump', 'J.D. Vance')" name="candidate-select" style="display: none;"/>
+                    <input type="radio" tabindex="2" onclick="storeVote('REPUBLICAN', 'Donald J. Trump', 'J.D. Vance')" name="candidate-select" style=""/>
                     <h2>REPUBLICAN</h2>
                     <h3>For president:</h3>
                     <p>Donald J. Trump</p>
@@ -26,7 +26,7 @@
             </label>
             <label role="radio" class="radio">
                 <div class="party-row">
-                    <input type="radio" onclick="storeVote('DEMOCRAT', 'Kamala D. Harris', 'Tim Walz')" name="candidate-select" style="display: none;"/>
+                    <input type="radio" tabindex="4" onclick="storeVote('DEMOCRAT', 'Kamala D. Harris', 'Tim Walz')" name="candidate-select" style=""/>
                     <h2>DEMOCRAT</h2>
                     <h3>For president:</h3>
                     <p>Kamala D. Harris</p>
@@ -36,7 +36,7 @@
             </label>
             <label role="radio" class="radio">
                 <div class="party-row">
-                    <input type="radio" onclick="storeVote('LIBERTARIAN', 'Chase Oliver', 'Mike ter Maat')" name="candidate-select" style="display: none;"/>
+                    <input type="radio" tabindex="6" onclick="storeVote('LIBERTARIAN', 'Chase Oliver', 'Mike ter Maat')" name="candidate-select" style=""/>
                     <h2>LIBERTARIAN</h2>
                     <h3>For president:</h3>
                     <p>Chase Oliver</p>
